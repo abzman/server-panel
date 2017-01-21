@@ -1,0 +1,40 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sdb1 during installation
+UUID=5bf5b722-a8d9-451a-ad52-6f1f5c103d5c /               ext4    errors=remount-ro 0       1
+
+
+
+UUID=4db3d3dd-d022-4e06-8958-b67c056f4bdf	/mnt/wd2tb	ext4	defaults,errors=remount-ro	0	1
+
+UUID=e4b6fc2d-80e5-4e68-9c1d-6cd1d8d7849c	/mnt/sg2tb	ext4	defaults,errors=remount-ro	0	1
+UUID=e50e1e56-8617-4d17-87c3-66e5f86cfd3c	/mnt/sg2tb3	ext4	defaults,errors=remount-ro	0	1
+
+UUID=24c2e2d4-ebda-47fd-a7bb-ac629daaba70	/mnt/wd5tb1	ext4	defaults,errors=remount-ro	0	1
+UUID=0fde5831-5dcc-4b8c-99fd-3ba7ef2066c5	/mnt/wd5tb2	ext4	defaults,errors=remount-ro	0	1
+UUID=0a4aeb39-4ddd-4647-b52f-09cdd6110f27	/mnt/wd5tb3	ext4	defaults,errors=remount-ro	0	1
+
+
+/mnt	/exports/drives	none bind
+
+
+/mnt/wd2tb/TV	/exports/media/TV/current_tv	none bind
+/mnt/sg2tb3/TV	/exports/media/TV/past_tv_1	none bind
+/mnt/sg2tb/TV	/exports/media/TV/past_tv_2	none bind
+/mnt/wd5tb3/past_tv_3	/exports/media/TV/past_tv_3	none bind
+/mnt/wd5tb2/past_tv_4	/exports/media/TV/past_tv_4	none bind
+
+/mnt/wd5tb1/Movies/SD	/exports/media/Movies/SD	none bind
+/mnt/wd5tb1/Movies/720p	/exports/media/Movies/720p	none bind
+/mnt/wd5tb1/Movies/1080p	/exports/media/Movies/1080p	none bind
+/mnt/wd5tb1/Movies/unsorted_movies	/exports/media/Movies/unsorted_movies	none bind
+
+/mnt/wd5tb2/Audio	/exports/media/Audio	none bind
+/mnt/wd5tb3/Clips	/exports/media/Clips	none bind
+/mnt/wd5tb3/Software	/exports/media/Software	none bind
+/mnt/wd5tb3/Documents	/exports/media/Documents	none bind
